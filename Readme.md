@@ -1,0 +1,1 @@
+Project for customizing a VS Code theme
