@@ -105,6 +105,15 @@
    "tokenColors": [
       // Added or Changed
       {
+         "name": "HTML Text",
+         "scope": [
+            "text.html.derivative"
+         ],
+         "settings": {
+            "foreground": "#7abaee"
+         }
+      },
+      {
          "name": "Parameters",
          "scope": [
             "variable.other.object.js",
@@ -112,6 +121,8 @@
             "variable.argument",
             "meta.method.body",
             "meta.indexed-name",
+            "source.cpp meta.parameter.initialization",
+            "variable.other.object.ts",
          ],
          "settings": {
             "foreground": "#a70fc5"
@@ -124,8 +135,33 @@
             "variable.other.objectasdasd",
             "string constant.other.placeholder",
             "variable.other.property.js",
+            "variable.other.constant.js",
+            "meta.object-literal.key.js",
             "variable.other.object.property",
-            "meta.attribute"
+            "meta.attribute",
+            "source.python",
+            "source.c meta.block.c",
+            "meta.body.function.definition.cpp",
+            "meta.body.class.cpp",
+            "variable.object.property",
+            "variable.other.property.ts",
+            "variable.other.constant.ts",
+            "meta.object-literal.key.ts",
+            "variable.css",
+         ],
+         "settings": {
+            "foreground": "#f32f84"
+         }
+      },
+      {
+         "name": "CSS Class and Support",
+         "scope": [
+            "source.css support.type.property-name",
+            "source.sass support.type.property-name",
+            "source.scss support.type.property-name",
+            "source.less support.type.property-name",
+            "source.stylus support.type.property-name",
+            "source.postcss support.type.property-name"
          ],
          "settings": {
             "foreground": "#f32f84"
@@ -164,7 +200,9 @@
             "punctuation.definition.begin",
             "punctuation.definition.end",
             "punctuation.section.array-initializer",
-            "punctuation.section.function"
+            "punctuation.section.function",
+            "source.cpp punctuation.separator.scope-resolution",
+            "meta.brace.square.ts",
          ],
          "settings": {
             "foreground": "#0048ff"
@@ -185,7 +223,6 @@
          "name": "Operator, Misc",
          "scope": [
             "meta.brace",
-            "constant.other.color",
             "punctuation",
             "meta.tag",
             "punctuation.definition.tag",
@@ -195,21 +232,25 @@
             "punctuation.definition.tag.end.html",
             "punctuation.section.embedded",
             "keyword.other.template",
-            "keyword.other.substitution"
+            "keyword.other.substitution",
          ],
          "settings": {
             "foreground": "#5454c7c2"
          }
       },
       {
-         "name": "Keyword, Storage",
+         "name": "Keyword",
          "scope": [
             "storage.modifier",
             "storage.type.class.python",
             "storage.type.function.python",
             "storage.type.class.js",
             "entity.name.tag.html",
-            "storage.type.js"
+            "storage.type.js",
+            "storage.type.class",
+            "storage.type.modifier.access.control",
+            "storage.type.interface",
+            "storage.type.ts",
          ],
          "settings": {
             "foreground": "#5321C9",
@@ -217,10 +258,23 @@
          }
       },
       {
+         "name": "Colors",
+         "scope": [
+            "constant.other.color"
+         ],
+         "settings": {
+            "foreground": "#2fe0ff"
+         }
+      },
+      {
          "name": "Operator",
          "scope": [
             "keyword.operator",
-            "punctuation.separator.key-value"
+            "punctuation.separator.key-value",
+            "support.constant.property-value.css",
+            "constant.language",
+            "keyword.other.unit.px.css",
+            "storage.type.function.arrow.js"
          ],
          "settings": {
             "foreground": "#2FCEFF",
@@ -228,7 +282,7 @@
          }
       },
       {
-         "name": "Operator & Types",
+         "name": "Types",
          "scope": [
             "source.java storage.type",
             "meta.method.identifier",
@@ -236,6 +290,9 @@
             "support.type",
             "storage.type.object",
             "source.c storage.type",
+            "source.cpp storage.type",
+            "entity.name.scope-resolution",
+            "source.css punctuation.definition"
          ],
          "settings": {
             "foreground": "#2fe0ff",
@@ -251,7 +308,7 @@
             "entity.other.attribute-name",
             "meta.method.declaration.js storage.type.js",
             "storage.type.property",
-            "meta.function-call.python"
+            "meta.function-call.python",
          ],
          "settings": {
             "foreground": "#ec00e5"
@@ -262,8 +319,8 @@
          "scope": [
             "meta.import",
             "storage.modifier.import",
-            "punctuation.definition.directive.c",
-            "keyword.control.directive.include.c"
+            "punctuation.definition.directive",
+            "keyword.control.directive.include",
          ],
          "settings": {
             "foreground": "#FF9060"
@@ -272,16 +329,25 @@
       {
          "name": "Class",
          "scope": [
-            "entity.name",
+            "entity.name.type",
+            "entity.name.tag.css",
+            "source.css entity.other.attribute-name",
+            "entity.other.attribute-name.id.css",
+            "source.css keyword.control.at-rule"
          ],
          "settings": {
             "foreground": "#FD9845"
          }
       },
       {
-         "name": "Language methods",
+         "name": "this, self, return",
          "scope": [
-            "variable.language",
+            "variable.language.this",
+            "keyword.control.java",
+            "keyword.control.new.java",
+            "variable.language.special",
+            "keyword.control.flow",
+            "keyword.control.return",
          ],
          "settings": {
             "fontStyle": "italic",
@@ -303,15 +369,6 @@
          "scope": [],
          "settings": {
             "foreground": "#EEFFFF"
-         }
-      },
-      {
-         "name": "Colors",
-         "scope": [
-            "constant.other.color"
-         ],
-         "settings": {
-            "foreground": "#ffffff"
          }
       },
       {
@@ -355,7 +412,6 @@
       {
          "name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
          "scope": [
-            "constant.language",
             "support.constant",
             "constant.character",
             "constant.escape",
@@ -402,20 +458,6 @@
          }
       },
       {
-         "name": "CSS Class and Support",
-         "scope": [
-            "source.css support.type.property-name",
-            "source.sass support.type.property-name",
-            "source.scss support.type.property-name",
-            "source.less support.type.property-name",
-            "source.stylus support.type.property-name",
-            "source.postcss support.type.property-name"
-         ],
-         "settings": {
-            "foreground": "#B2CCD6"
-         }
-      },
-      {
          "name": "Sub-methods",
          "scope": [
             "entity.name.module.js",
@@ -454,15 +496,6 @@
          ],
          "settings": {
             "fontStyle": "italic",
-            "foreground": "#FFCB6B"
-         }
-      },
-      {
-         "name": "CSS Classes",
-         "scope": [
-            "entity.other.attribute-name.class"
-         ],
-         "settings": {
             "foreground": "#FFCB6B"
          }
       },
