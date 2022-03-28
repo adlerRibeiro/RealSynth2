@@ -10,6 +10,7 @@
       "editorBracketMatch.background": "#18f0ff18",
       "editorBracketMatch.border": "#18f0ff70",
       "editorWarning.foreground": "#fff2009a",
+      "editorCodeLens.foreground": "#6d51a1e5",
       // Unchanged
       "activityBar.background": "#00001f",
       "activityBar.foreground": "#bbbbff",
@@ -32,7 +33,6 @@
       "editor.lineHighlightBackground": "#7070bb36",
       "editor.selectionBackground": "#bbbbff36",
       "editor.selectionHighlightBackground": "#bbbbff36",
-      "editorCodeLens.foreground": "#bbbbff",
       "editorCursor.foreground": "#d3d3ff",
       "editorGroup.border": "#bbbbff8e",
       "editorGroup.dropBackground": "#bbbbff5b",
@@ -123,6 +123,7 @@
             "meta.indexed-name",
             "source.cpp meta.parameter.initialization",
             "variable.other.object.ts",
+            "entity.name.variable.parameter.cs"
          ],
          "settings": {
             "foreground": "#a70fc5"
@@ -148,6 +149,12 @@
             "variable.other.constant.ts",
             "meta.object-literal.key.ts",
             "variable.css",
+            "variable.other.readwrite.js",
+            "variable.other.php",
+            "variable.other.property.php",
+            "entity.name.variable.property.cs",
+            "variable.other.readwrite.cs",
+            "entity.name.variable.local.cs"
          ],
          "settings": {
             "foreground": "#f32f84"
@@ -181,6 +188,7 @@
          "scope": [
             "string.quoted",
             "constant.numeric",
+            "string.template.js"
          ],
          "settings": {
             "foreground": "#FFA60B"
@@ -202,7 +210,8 @@
             "punctuation.section.array-initializer",
             "punctuation.section.function",
             "source.cpp punctuation.separator.scope-resolution",
-            "meta.brace.square.ts",
+            "meta.brace.square",
+            "punctuation.section.array",
          ],
          "settings": {
             "foreground": "#0048ff"
@@ -251,6 +260,9 @@
             "storage.type.modifier.access.control",
             "storage.type.interface",
             "storage.type.ts",
+            "storage.type.function.js",
+            "storage.type.function.php",
+            "source.cs keyword.other",
          ],
          "settings": {
             "foreground": "#5321C9",
@@ -274,7 +286,8 @@
             "support.constant.property-value.css",
             "constant.language",
             "keyword.other.unit.px.css",
-            "storage.type.function.arrow.js"
+            "storage.type.function.arrow.js",
+            "punctuation.definition.variable.php"
          ],
          "settings": {
             "foreground": "#2FCEFF",
@@ -292,7 +305,9 @@
             "source.c storage.type",
             "source.cpp storage.type",
             "entity.name.scope-resolution",
-            "source.css punctuation.definition"
+            "source.css punctuation.definition",
+            "keyword.other.type.php",
+            "keyword.type.cs"
          ],
          "settings": {
             "foreground": "#2fe0ff",
@@ -309,6 +324,8 @@
             "meta.method.declaration.js storage.type.js",
             "storage.type.property",
             "meta.function-call.python",
+            "keyword.other.get.cs",
+            "keyword.other.set.cs"
          ],
          "settings": {
             "foreground": "#ec00e5"
@@ -333,14 +350,15 @@
             "entity.name.tag.css",
             "source.css entity.other.attribute-name",
             "entity.other.attribute-name.id.css",
-            "source.css keyword.control.at-rule"
+            "source.css keyword.control.at-rule",
+            "support.class",
          ],
          "settings": {
             "foreground": "#FD9845"
          }
       },
       {
-         "name": "this, self, return",
+         "name": "this, self, return, new",
          "scope": [
             "variable.language.this",
             "keyword.control.java",
@@ -348,6 +366,10 @@
             "variable.language.special",
             "keyword.control.flow",
             "keyword.control.return",
+            "source.js keyword.control",
+            "entity.name.tag",
+            "keyword.other.new.php",
+            "keyword.other.new.cs"
          ],
          "settings": {
             "fontStyle": "italic",
@@ -384,7 +406,6 @@
       {
          "name": "Tag",
          "scope": [
-            "entity.name.tag",
             "meta.tag.sgml",
             "markup.deleted.git_gutter"
          ],
@@ -439,7 +460,6 @@
       {
          "name": "Class, Support",
          "scope": [
-            "support.class",
             "support.other.namespace.use.php",
             "meta.use.php",
             "support.other.namespace.php",
